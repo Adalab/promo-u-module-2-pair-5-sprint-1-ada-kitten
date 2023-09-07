@@ -1,6 +1,11 @@
 'use strict'
 
 const list = document.querySelector(".js-list");
+const kittenImage1 = 'https://dev.adalab.es/gato-siames.webp';
+const kittenName1 = 'Anastacio';
+const kittenDesc1 =
+  ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.';
+const kittenRace1 = 'Siamés';
 
 const kittenOne = `<li class="card">
 <article>
@@ -9,7 +14,7 @@ const kittenOne = `<li class="card">
     src="https://dev.adalab.es/gato-siames.webp"
     alt="siames-cat"
   />
-  <h3 class="card_title">Anastacio</h3>
+  <h3 class="card_title">`${kittenName1}`</h3>
   <h4 class="card_race">Siamés</h4>
   <p class="card_description">
     Porte elegante, su patrón de color tan característico y sus ojos
@@ -32,7 +37,7 @@ const kittenTwo =`<li class="card">
   gatuna que se caracteriza por la «ausencia» de pelo.
 </p>
 </li>`
-conts kittenThree = `<li class="card">
+const kittenThree = `<li class="card">
 <img
   class="card_img"
   src="https://dev.adalab.es/maine-coon-cat.webp"
@@ -46,7 +51,9 @@ conts kittenThree = `<li class="card">
   Sus ojos son grandes y las orejas resultan largas y en punta.
 </p>
 </li>`
+list.innerHTML = kittenOne;
+list.innerHTML += kittenTwo;
+list.innerHTML += kittenThree;
 
-list.innerHTML = list.innerHTML + 'kittenOne';
-list.innerHTML = list.innerHTML + 'kittenTwo';
-list.innerHTML = list.innerHTML + 'kittenThree';
+
+
