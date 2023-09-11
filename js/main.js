@@ -78,13 +78,33 @@ const input_search_desc = document.querySelector('.js_in_search_desc');
 const descrSearchText = input_search_desc.value;
 
 
-if( kittenDesc1.includes(elegante) ) {  
-  list.innerHTML = 'kittenOne';
+if( kittenDesc1.includes(descrSearchText) ) {  
+  list.innerHTML = kittenOne;
   }  
-  if( kittenDesc2.includes(Exótico) ) {
-    list.innerHTML = 'kittenTwo';
+  if( kittenDesc2.includes(descrSearchText) ) {
+    list.innerHTML = kittenTwo;
   }
-  if ( kittenDesc3.includes(simétricos) ) {
-    list.innerHTML = 'kittenThree';
+  if ( kittenDesc3.includes(descrSearchText) ) {
+    list.innerHTML = kittenThree;
   }
+
+const formSection = document.querySelector('.js-new-form');
+formSection.classList.remove('collapsed');
     
+  const kitten4 = document.querySelector('.js-btn-add');
+btnAdd.addEventListener("click", (Event) => {
+const inputDesc = document.querySelector('.js-input-desc');
+const inputPhoto = document.querySelector('.js-input-photo');
+const inputName = document.querySelector('.js-input-name');
+const labelMessageError = document.querySelector('.js-label-error');
+const valueDesc = inputDesc.value;
+const valuePhoto = inputPhoto.value;
+const valueName = inputName.value;
+
+if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+  
+  ValueDesc.innerHTML = 
+} else {
+  //completa el código
+}
+  });
