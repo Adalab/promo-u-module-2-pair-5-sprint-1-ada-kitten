@@ -88,23 +88,45 @@ if( kittenDesc1.includes(descrSearchText) ) {
     list.innerHTML = kittenThree;
   }
 
-const formSection = document.querySelector('.js-new-form');
-formSection.classList.remove('collapsed');
+
     
-  const kitten4 = document.querySelector('.js-btn-add');
-btnAdd.addEventListener("click", (Event) => {
-const inputDesc = document.querySelector('.js-input-desc');
+  const btnAdd = document.querySelector('.js-btn-add');
+  btnAdd.addEventListener("click", (event) => {
+    event.preventDefault();
+
+  const inputDesc = document.querySelector('.js-input-desc');
 const inputPhoto = document.querySelector('.js-input-photo');
 const inputName = document.querySelector('.js-input-name');
-const labelMessageError = document.querySelector('.js-label-error');
+const labelError = document.querySelector('.js-label-error');
 const valueDesc = inputDesc.value;
 const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
 
 if (valueDesc === '' || valuePhoto === '' || valueName === '') {
-  
-  ValueDesc.innerHTML = 
-} else {
-  //completa el código
-}
+  labelError.innerHTML = "¡Uy! parece que has olvidado algo";
+} else {}
   });
+
+ //funciones 1
+
+const newForm = document.querySelector('.js-new-form');
+
+  function showNewCatForm() {
+    newForm.classList.remove('collapsed');
+  }
+  function hideNewCatForm() {
+    newForm.classList.add('collapsed');
+  }
+
+  function handleClickNewCatForm(event) {
+    event.preventDefault();
+    if (newFormElement.classList.contains('collapsed')) {
+      //completa el código
+    } else {
+      //completa el código
+    }
+  }
+
+  linkNewFormElement.addEventListener('click', handleClickNewCatForm);
+  
+  
