@@ -110,6 +110,7 @@ if (valueDesc === '' || valuePhoto === '' || valueName === '') {
  //funciones 1
 
 const newForm = document.querySelector('.js-new-form');
+const circle = document.querySelector('.js-circle');
 
   function showNewCatForm() {
     newForm.classList.remove('collapsed');
@@ -118,15 +119,37 @@ const newForm = document.querySelector('.js-new-form');
     newForm.classList.add('collapsed');
   }
 
-  function handleClickNewCatForm(event) {
+  /*function handleClickNewCatForm(event) {
     event.preventDefault();
-    if (newFormElement.classList.contains('collapsed')) {
-      //completa el código
+    if (newForm.classList.contains('collapsed')) {
+      showNewCatForm();
     } else {
-      //completa el código
+      hideNewCatForm();
+    }
+  }
+  circle.addEventListener('click', handleClickNewCatForm);*/
+  
+ //  ejercicio 2
+
+  function handleClickaddNewKitten(event) {
+    event.preventDefault();
+    if (newForm.classList.contains('collapsed')) {
+      showNewCatForm();
+    } else {
+      hideNewCatForm();
     }
   }
 
-  linkNewFormElement.addEventListener('click', handleClickNewCatForm);
   
+btnAdd.addEventListener('click', handleClickaddNewKitten);
   
+
+//ejercicio 3
+
+
+function renderKitten(){
+
+}
+function renderKitten(url, desc, name, race) {
+  //completa el código
+}
