@@ -25,7 +25,7 @@ const kittenDesc3 =
   Sus ojos son grandes y las orejas resultan largas y en punta.`;
 
 
-const kittenOne = `<li class="card">
+/*const kittenOne = `<li class="card">
 <article>
   <img
     class="card_img"
@@ -71,24 +71,24 @@ const kittenThree = `<li class="card">
 </li>`
 list.innerHTML = kittenOne;
 list.innerHTML += kittenTwo;
-list.innerHTML += kittenThree;
+list.innerHTML += kittenThree;*/
 
 
 const input_search_desc = document.querySelector('.js_in_search_desc');
 const descrSearchText = input_search_desc.value;
 
 
-if( kittenDesc1.includes(descrSearchText) ) {  
+/*if( kittenDesc1.includes(descrSearchText) ) {  
   list.innerHTML = kittenOne;
   }  
   if( kittenDesc2.includes(descrSearchText) ) {
-    list.innerHTML = kittenTwo;
+   list.innerHTML = kittenTwo;
   }
   if ( kittenDesc3.includes(descrSearchText) ) {
     list.innerHTML = kittenThree;
   }
-
-
+*/
+/*función para añadir nuevo gato*/
     
   const btnAdd = document.querySelector('.js-btn-add');
   btnAdd.addEventListener("click", (event) => {
@@ -119,7 +119,7 @@ const circle = document.querySelector('.js-circle');
     newForm.classList.add('collapsed');
   }
 
-  /*function handleClickNewCatForm(event) {
+  function handleClickNewCatForm(event) {
     event.preventDefault();
     if (newForm.classList.contains('collapsed')) {
       showNewCatForm();
@@ -127,29 +127,38 @@ const circle = document.querySelector('.js-circle');
       hideNewCatForm();
     }
   }
-  circle.addEventListener('click', handleClickNewCatForm);*/
+  circle.addEventListener('click', handleClickNewCatForm);
   
  //  ejercicio 2
 
-  function handleClickaddNewKitten(event) {
-    event.preventDefault();
-    if (newForm.classList.contains('collapsed')) {
-      showNewCatForm();
-    } else {
-      hideNewCatForm();
-    }
-  }
-
+ 
   
-btnAdd.addEventListener('click', handleClickaddNewKitten);
+
   
 
 //ejercicio 3
 
 
-function renderKitten(){
+
+
+
+function renderKitten(url, desc, name, race) {
+  const kitten = `<li class="card">
+<img
+  class="card_img"
+  src="${url}"
+  alt="maine-coon-cat"
+/>
+<h3 class="card_title">${name.toUpperCase()}</h3>
+<h4 class="card_race">${race}</h4>
+<p class="card_description">${desc}
+ 
+</p>
+</li>`
+return kitten;
 
 }
-function renderKitten(url, desc, name, race) {
-  //completa el código
-}
+
+list.innerHTML = renderKitten(kittenImage1, kittenName1, kittenDesc1, kittenRace1);
+list.innerHTML += renderKitten(kittenImage2, kittenName2, kittenDesc2, kittenRace2);
+list.innerHTML += renderKitten(kittenImage3, kittenName3, kittenDesc3, kittenRace3);
