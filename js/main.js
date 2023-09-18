@@ -76,19 +76,19 @@ function renderKitten(kittenData) {
   const kitten = `<li class="card">
 <img
   class="card_img"
-  src="${url}"
+  src="${objetokitten.image}"
   alt="maine-coon-cat"
 />
-<h3 class="card_title">${name.toUpperCase()}</h3>
-<h4 class="card_race">${race}</h4>
-<p class="card_description">${desc}
+<h3 class="card_title">${objetokitten.name.toUpperCase()}</h3>
+<h4 class="card_race">${objetokitten.race}</h4>
+<p class="card_description">${objetokitten.desc}
  
 </p>
 </li>`
 return kitten;
 }
 
-list.innerHTML = renderKitten(kittenImage1, kittenName1, kittenDesc1, kittenRace1,);
+list.innerHTML = renderKitten(kittenImage1, kittenName1, kittenDesc1, kittenRace1);
 list.innerHTML += renderKitten(kittenImage2, kittenName2, kittenDesc2, kittenRace2);
 list.innerHTML += renderKitten(kittenImage3, kittenName3, kittenDesc3, kittenRace3);
 
@@ -120,20 +120,21 @@ buttonSearch.addEventListener('click', filterKitten);
 //OBJETOS
 
 const kittenData_1 = {
-  image: 'https://dev.adalab.es/gato-siames.webp',
-  name: 'Anastacio',
-  desc: ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.',
-  race: 'Siamés',
+  image: 'kittenImage1',
+  name: 'kittenName1',
+  desc: ' kittenDesc1',
+  race: 'kittenRace1',
 };
 const kittenData_2 = {
-  image: 'https://dev.adalab.es/gato-siames.webp',
-  name: 'Anastacio',
-  desc: ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.',
-  race: 'Siamés',
+  image: 'kittenImage2',
+  name: 'FkittenName2',
+  desc: `kittenDesc2`,
+  race: 'SkittenRace2',
 };
 const kittenData_3 = {
-  image: 'https://dev.adalab.es/gato-siames.webp',
-  name: 'Anastacio',
-  desc: ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.',
-  race: 'Siamés',
+  image: 'kittenImage3',
+  name: 'kittenName3',
+  desc:  `kittenDesc3`,
+  race: 'kittenRace3',
 };
+filterKitten();
